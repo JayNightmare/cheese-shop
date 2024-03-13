@@ -1,19 +1,20 @@
 <html>
-
-<!-- Link CSS for homepage -->
-<link href="../css/homepage.css" type="text/css" rel="stylesheet">
-<script src="../js/homepage.js"></script>
-
+<head>
+    <title>Cheesy Wonder</title>
+    <!-- Link CSS for homepage -->
+    <link href="../css/homepage.css" type="text/css" rel="stylesheet">
+    <script type="module" src="../js/homepage.js"></script>
+</head>
 
 <body>
     <!-- Nav Bar -->
     <nav>
         <div>
-            <h1>This is a test</h1>
+            <h1>Cheesy Wonder</h1>
         </div>
         <div>
-            <h5>Home</h5>
-            <button onclick="myFunction()" class="dropbtn">Cheeses</button>
+            <button class="btn">Home</button>
+            <button onclick="myFunction()" class="btn">Cheeses</button>
             <div id="myDropdown" class="dropdown-content">
                 <a href="#">English Cheeses</a>
                 <a href="#">Scottish Cheeses</a>
@@ -21,10 +22,10 @@
                 <a href="#">Irish Cheeses</a>
                 <a href="#">French Cheeses</a>
             </div>
-            <h5>Basket</h5>
-            <h5>Checkout</h5>
+            <button class="btn">Basket</button>
+            <button class="btn">Checkout</button>
         </div>
-        <div>
+        <div class="account-section"> 
             <button>Login</button>
             <button>Signup</button>
         </div>
@@ -52,7 +53,7 @@
                         <div class="nav-right">
                             <div class="nav-search-submit">
                                 <span aria-label="Go">
-                                    <input id="nav-search-submit-button" type="submit" class="nav-input nav-progressive-attribute" value="Go" tabindex="0">
+                                    <input id="nav-search-submit-button" type="submit" class="nav-input nav-progressive-attribute" value="Go" tabindex="1">
                                 </span>
                             </div>
                         </div>
@@ -63,24 +64,43 @@
                 <img src="..\images\homepage-cheese.png">
             </div>
         </div>
-        <!-- Most Popular Cheeses -->
+        <!-- Most Popular Cheeses --> 
         <div class="main-subject">
             <div id="most-popular">
-                <div class="squares">
-                    <h1 class="span center">Parmigiano-Reggiano Cheese</h1>
+                <div class="squares down">
+                    <h1 class="span center padding-sides">Camembert Cheese</h1>
                     <hr>
-                    <p class="center">Strength: 4</p>
+                    <p class="center padding-sides">Strength: 3</p>
                     <hr>
-                    <p>A hard, granular cheese known for its sharp, nutty flavor. Pairs well with full-bodied red wines and drizzled with honey</p>
-                    <img src="..\images\homepage-cheese.png">
+                    <p class="padding-sides">A soft, creamy cheese with a bloomy rind, offering earthy and nutty flavors. Best with baguette, fruits, or light-bodied white wine</p>
+                    <div class="padding-sides">
+                        <img src="..\images\homepage-cheese.png"> 
+                    </div> 
                 </div>
-                <div class="squares">
-                    <h1 class="span center">Parmigiano-Reggiano Cheese</h1>
+                <div class="squares pop">
+                    <div class="most-popular-banner">
+                        <h1 class="center">MOST POPULAR</h1>
+                        <!-- Confetti container -->
+                        <div id="confeti"></div> 
+                    </div>                    
+                    <h1 class="span center padding-sides">Parmigiano-Reggiano Cheese</h1>
+                    <hr> 
+                    <p class="center padding-sides">Strength: 4</p>
+                    <hr>  
+                    <p class="padding-sides">A hard, granular cheese known for its sharp, nutty flavor. Pairs well with full-bodied red wines and drizzled with honey</p>
+                    <div>
+                        <img src="..\images\homepage-cheese.png">
+                    </div>
+                </div>
+                <div class="squares down">
+                    <h1 class="span center padding-sides">Allgäu Emmental Cheese</h1>
                     <hr>
-                    <p class="center">Strength: 4</p>
+                    <p class="center padding-sides">Strength: 2</p>
                     <hr>
-                    <p>A hard, granular cheese known for its sharp, nutty flavor. Pairs well with full-bodied red wines and drizzled with honey</p>
-                    <img src="..\images\homepage-cheese.png">
+                    <p class="padding-sides">A semi-hard cheese with a sweet, nutty taste and characteristic holes. Goes well with fruity white wines or a crisp lager</p>
+                    <div class="padding-sides">
+                        <img src="..\images\homepage-cheese.png">
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,11 +1,28 @@
+@use "sass:math";
+
 body {
     background-color: black;
     margin: 0;
     padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6, a, span {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav>div>.btn {
+    font-size: large;
+}
+
+.account-section>button {
+    font-size: medium;
 }
 
 p {
@@ -15,33 +32,35 @@ p {
 
 /* Nav Bar Styling */
 
-nav { 
+nav {
     background-color: white;
     height: 8%;
     width: 100%;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+
+    border-bottom: 1px solid black;
 }
 
-nav > div > * {
+nav>div>* {
     cursor: pointer;
 }
 
-nav > div:nth-child(1) {
+nav>div:nth-child(1) {
     display: flex;
     align-items: center;
     padding-left: 10px;
     height: 100%;
 }
 
-nav > div:nth-child(1) > h1 {
+nav>div:nth-child(1)>h1 {
     margin: 0;
     padding: 0;
 }
 
 /* Options */
-nav > div:nth-child(2) {
+nav>div:nth-child(2) {
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -50,7 +69,7 @@ nav > div:nth-child(2) {
 }
 
 /* Login/Signup */
-nav > div:nth-child(3) {
+nav>div:nth-child(3) {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -75,18 +94,19 @@ nav > div:nth-child(3) {
     }
 }
 
-.dropbtn {
+.btn {
     color: rgb(0, 0, 0);
     padding: 5px;
     border: none;
     cursor: pointer;
     background-color: white;
-    border-radius: 2px;
+    border-radius: 3px;
     transition: all 150ms ease-out;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.dropbtn:hover, .dropbtn:focus {
+.btn:hover,
+.btn:focus {
     background-color: #e6da6e;
     transition: all 150ms ease-in;
 }
@@ -100,10 +120,10 @@ nav > div:nth-child(3) {
     display: none;
     position: absolute;
     top: 8%;
-    left: 35%;
+
     background-color: #f1f1f1;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 0px 0px 5px 5px;
 }
@@ -129,12 +149,14 @@ nav > div:nth-child(3) {
 
 #main {
     height: 100%;
-    width: 100%;    
+    width: 100%;
 
-    .banner { 
+    background-color: rgb(174, 175, 142);
+
+    .banner {
         display: flex;
         flex-direction: row;
-        background-color: aliceblue;
+        background-color: #fffff0;
         width: 100%;
         height: 20em;
         justify-content: center;
@@ -147,10 +169,10 @@ nav > div:nth-child(3) {
 }
 
 .picture {
-    width:auto;
+    width: auto;
 }
 
-.picture > img {
+.picture>img {
     width: 300px;
     object-fit: contain;
 }
@@ -158,6 +180,7 @@ nav > div:nth-child(3) {
 /* //// */
 
 /* Search Bar */
+
 #input-section {
     display: flex;
     position: static;
@@ -165,16 +188,39 @@ nav > div:nth-child(3) {
     float: none;
     height: 15%;
     width: 100%;
+
+    justify-content: center;
+
+    gap: 10px;
 }
 
 [aria-label="Search For Cheese"] {
     flex: 1 1 0px;
     float: none;
-    border-radius: 5px 0px 0px 5px;
+    border-radius: 5px;
     border: 1px solid rgba(54, 54, 54, 0.507);
     width: 100%;
     font-size: medium;
     padding-left: 5px;
+
+    height: 100%;
+}
+
+.nav-fill {
+    width: 100%;
+}
+
+.nav-right>div>span>input {
+    height: 100%;
+    width: 150%;
+    border-radius: 5px;
+    border: 1px solid;
+    background-color: coral;
+    cursor: pointer;
+}
+
+.nav-right>div>span>input:active {
+    background-color: #ddd;
 }
 
 /* //// */
@@ -183,33 +229,88 @@ nav > div:nth-child(3) {
 
 .main-subject {
     height: 100%;
-    width: max-content;
+    width: 98.3%;
     padding: 10px;
 }
 
 #most-popular {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
 }
 
-#most-popular > div > img {
+#most-popular>.squares>div>img {
     width: 100px;
     height: 100px;
 }
 
-#most-popular > div > h1, #most-popular > div > p, span {
-    color: white;
+#most-popular>.squares>div {
+    display: flex;
+    justify-content: center;
+}
+
+#most-popular>div>h1,
+#most-popular>div>p,
+span {
+    color: rgb(0, 0, 0);
 }
 
 .squares {
-    width: 15em;
-    border: 1px solid gray;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 400px;
+    background-color: white;
+}
+
+.squares.visible {
+    opacity: 1;
+    transform: translateY(0px);
+    animation: fadeUp 1s ease-in-out forwards;
+}
+
+.squares>hr {
+    width: 95%;
+}
+
+.down {
+    position: relative;
+    top: 50px;
 }
 
 .center {
     text-align: center;
 }
 
-.span { font-size: 28px; }
+.span {
+    font-size: 28px;
+}
+
+.padding-sides {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.most-popular-banner {
+    width: 100%;
+    height: 20%;
+    padding: 0;
+    background-color: #ffe923;
+    border-bottom: 1px solid;
+    position: relative;
+}
+
+.pop { z-index: 1; }
+.confeti { z-index: 0; }
+
+
+/* ANIMATIONS */
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
