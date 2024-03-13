@@ -227,7 +227,7 @@ nav>div:nth-child(3) {
 
 /* Most Popular Cheeses */
 
-.main-subject {
+.content-grid {
     height: 100%;
     width: 98.3%;
     padding: 10px;
@@ -298,10 +298,45 @@ span {
 }
 
 .pop { z-index: 1; }
-.confeti { z-index: 0; }
+
+#list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ 
+.animals {
+    font-size: 1.2em;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    animation: fadeIn 0.5s ease-in-out;
+}
+ 
+.animals:last-child {
+    border-bottom: none;
+}
+
+.main-content {
+    background-color: #ccc;
+    height: 20%;
+    width: 100%;
+}
+ 
 
 
 /* ANIMATIONS */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+ 
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 @keyframes fadeUp {
     0% {

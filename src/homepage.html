@@ -1,12 +1,13 @@
 <html>
+
 <head>
     <title>Cheesy Wonder</title>
     <!-- Link CSS for homepage -->
     <link href="../css/homepage.css" type="text/css" rel="stylesheet">
-    <script type="module" src="../js/homepage.js"></script>
 </head>
 
 <body>
+    <script type="module" src="../js/homepage.js"></script>
     <!-- Nav Bar -->
     <nav>
         <div>
@@ -25,7 +26,7 @@
             <button class="btn">Basket</button>
             <button class="btn">Checkout</button>
         </div>
-        <div class="account-section"> 
+        <div class="account-section">
             <button>Login</button>
             <button>Signup</button>
         </div>
@@ -47,13 +48,29 @@
                     <form id="input-section" name="site-search">
                         <div class="nav-fill">
                             <div class="nav-search-field">
-                                <input type="text" aria-label="Search For Cheese">
+                                <input id="searchbar" onkeyup="search_animal()" type="text" name="search"
+                                    placeholder="Search animals..">
+
+                                <ul id='list'>
+                                    <li class="animals">Cat</li>
+                                    <li class="animals">Dog</li>
+                                    <li class="animals">Elephant</li>
+                                    <li class="animals">Fish</li>
+                                    <li class="animals">Gorilla</li>
+                                    <li class="animals">Monkey</li>
+                                    <li class="animals">Turtle</li>
+                                    <li class="animals">Whale</li>
+                                    <li class="animals">Alligator</li>
+                                    <li class="animals">Donkey</li>
+                                    <li class="animals">Horse</li>
+                                </ul>
                             </div>
                         </div>
                         <div class="nav-right">
                             <div class="nav-search-submit">
                                 <span aria-label="Go">
-                                    <input id="nav-search-submit-button" type="submit" class="nav-input nav-progressive-attribute" value="Go" tabindex="1">
+                                    <input id="nav-search-submit-button" type="submit"
+                                        class="nav-input nav-progressive-attribute" value="Go" tabindex="1">
                                 </span>
                             </div>
                         </div>
@@ -64,30 +81,30 @@
                 <img src="..\images\homepage-cheese.png">
             </div>
         </div>
-        <!-- Most Popular Cheeses --> 
-        <div class="main-subject">
+        <!-- Most Popular Cheeses -->
+        <div class="content-grid">
             <div id="most-popular">
                 <div class="squares down">
                     <h1 class="span center padding-sides">Camembert Cheese</h1>
                     <hr>
                     <p class="center padding-sides">Strength: 3</p>
                     <hr>
-                    <p class="padding-sides">A soft, creamy cheese with a bloomy rind, offering earthy and nutty flavors. Best with baguette, fruits, or light-bodied white wine</p>
+                    <p class="padding-sides">A soft, creamy cheese with a bloomy rind, offering earthy and nutty
+                        flavors. Best with baguette, fruits, or light-bodied white wine</p>
                     <div class="padding-sides">
-                        <img src="..\images\homepage-cheese.png"> 
-                    </div> 
+                        <img src="..\images\homepage-cheese.png">
+                    </div>
                 </div>
                 <div class="squares pop">
                     <div class="most-popular-banner">
                         <h1 class="center">MOST POPULAR</h1>
-                        <!-- Confetti container -->
-                        <div id="confeti"></div> 
-                    </div>                    
+                    </div>
                     <h1 class="span center padding-sides">Parmigiano-Reggiano Cheese</h1>
-                    <hr> 
+                    <hr>
                     <p class="center padding-sides">Strength: 4</p>
-                    <hr>  
-                    <p class="padding-sides">A hard, granular cheese known for its sharp, nutty flavor. Pairs well with full-bodied red wines and drizzled with honey</p>
+                    <hr>
+                    <p class="padding-sides">A hard, granular cheese known for its sharp, nutty flavor. Pairs well with
+                        full-bodied red wines and drizzled with honey</p>
                     <div>
                         <img src="..\images\homepage-cheese.png">
                     </div>
@@ -97,10 +114,18 @@
                     <hr>
                     <p class="center padding-sides">Strength: 2</p>
                     <hr>
-                    <p class="padding-sides">A semi-hard cheese with a sweet, nutty taste and characteristic holes. Goes well with fruity white wines or a crisp lager</p>
+                    <p class="padding-sides">A semi-hard cheese with a sweet, nutty taste and characteristic holes. Goes
+                        well with fruity white wines or a crisp lager</p>
                     <div class="padding-sides">
                         <img src="..\images\homepage-cheese.png">
                     </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="content-grid">
+            <div class="main-content">
+                <div id="display-1">
                 </div>
             </div>
         </div>
@@ -108,4 +133,3 @@
 </body>
 
 </html>
-
