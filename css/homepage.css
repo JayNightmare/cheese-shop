@@ -4,7 +4,7 @@ body {
     padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6, a {
+h1, h2, h3, h4, h5, h6, a, span {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -40,6 +40,7 @@ nav > div:nth-child(1) > h1 {
     padding: 0;
 }
 
+/* Options */
 nav > div:nth-child(2) {
     display: flex;
     flex-direction: row;
@@ -48,6 +49,7 @@ nav > div:nth-child(2) {
     justify-content: center;
 }
 
+/* Login/Signup */
 nav > div:nth-child(3) {
     display: flex;
     align-items: center;
@@ -76,12 +78,12 @@ nav > div:nth-child(3) {
 .dropbtn {
     color: rgb(0, 0, 0);
     padding: 5px;
-    font-weight: 600;
     border: none;
     cursor: pointer;
     background-color: white;
     border-radius: 2px;
     transition: all 150ms ease-out;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .dropbtn:hover, .dropbtn:focus {
@@ -156,19 +158,23 @@ nav > div:nth-child(3) {
 /* //// */
 
 /* Search Bar */
+#input-section {
+    display: flex;
+    position: static;
+    flex: 1 1 0px;
+    float: none;
+    height: 15%;
+    width: 100%;
+}
 
 [aria-label="Search For Cheese"] {
-    border-radius: 5px 5px 5px 5px;
+    flex: 1 1 0px;
+    float: none;
+    border-radius: 5px 0px 0px 5px;
     border: 1px solid rgba(54, 54, 54, 0.507);
     width: 100%;
     font-size: medium;
     padding-left: 5px;
-}
-
-#input-section {
-    display: inline-flex;
-    height: 15%;
-    width: 100%;
 }
 
 /* //// */
@@ -177,10 +183,33 @@ nav > div:nth-child(3) {
 
 .main-subject {
     height: 100%;
-    width: 100%;
+    width: max-content;
+    padding: 10px;
 }
 
-#most-popular > img {
+#most-popular {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+#most-popular > div > img {
     width: 100px;
     height: 100px;
 }
+
+#most-popular > div > h1, #most-popular > div > p, span {
+    color: white;
+}
+
+.squares {
+    width: 15em;
+    border: 1px solid gray;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.center {
+    text-align: center;
+}
+
+.span { font-size: 28px; }
