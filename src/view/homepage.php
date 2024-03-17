@@ -3,40 +3,24 @@
 <head>
     <title>Cheesy Wonder</title>
     <!-- Link CSS for homepage -->
-    <link href="../css/homepage.css" type="text/css" rel="stylesheet">
+    <link href="../../css/homepage.css" type="text/css" rel="stylesheet">
+    <link href="../../css/navbar.css" type="text/css" rel="stylesheet">
+    <script src="../../js/dropdown.js"></script>
+    <script type="module" src="../../js/confetti.js"></script>
+    <script src="../../js/search.js"></script>
 </head>
-
+ 
 <body>
-    <script type="module" src="../js/homepage.js"></script>
+
     <!-- Nav Bar -->
-    <nav>
-        <div>
-            <h1>Cheesy Wonder</h1>
-        </div>
-        <div>
-            <button class="btn">Home</button>
-            <button onclick="myFunction()" class="btn">Cheeses</button>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="#">English Cheeses</a>
-                <a href="#">Scottish Cheeses</a>
-                <a href="#">Welsh Cheeses</a>
-                <a href="#">Irish Cheeses</a>
-                <a href="#">French Cheeses</a>
-            </div>
-            <button class="btn">Basket</button>
-            <button class="btn">Checkout</button>
-        </div>
-        <div class="account-section">
-            <button>Login</button>
-            <button>Signup</button>
-        </div>
-    </nav>
+
+    <?php require "navbar.php"; ?>
 
     <div id="main">
         <!-- Banner -->
         <div class="banner">
             <div class="picture gallery">
-                <img src="..\images\homepage-cheese.png">
+                <img src="..\../images\homepage-cheese.png">
             </div>
             <div>
                 <div id="headertext">
@@ -48,37 +32,18 @@
                     <form id="input-section" name="site-search">
                         <div class="nav-fill">
                             <div class="nav-search-field">
-                                <input id="searchbar" onkeyup="search_animal()" type="text" name="search"
-                                    placeholder="Search animals..">
+                                <input id="searchbar" onkeyup="search_animal()" type="text" name="search" placeholder="Search cheeses.." aria-label="Search For Cheese">
 
                                 <ul id='list'>
-                                    <li class="animals">Cat</li>
-                                    <li class="animals">Dog</li>
-                                    <li class="animals">Elephant</li>
-                                    <li class="animals">Fish</li>
-                                    <li class="animals">Gorilla</li>
-                                    <li class="animals">Monkey</li>
-                                    <li class="animals">Turtle</li>
-                                    <li class="animals">Whale</li>
-                                    <li class="animals">Alligator</li>
-                                    <li class="animals">Donkey</li>
-                                    <li class="animals">Horse</li>
+                                    <?php require "../model/search-cheese.php"?>
                                 </ul>
-                            </div>
-                        </div>
-                        <div class="nav-right">
-                            <div class="nav-search-submit">
-                                <span aria-label="Go">
-                                    <input id="nav-search-submit-button" type="submit"
-                                        class="nav-input nav-progressive-attribute" value="Go" tabindex="1">
-                                </span>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
             <div class="picture gallery">
-                <img src="..\images\homepage-cheese.png">
+                <img src="..\../images\homepage-cheese.png">
             </div>
         </div>
         <!-- Most Popular Cheeses -->
@@ -92,7 +57,7 @@
                     <p class="padding-sides">A soft, creamy cheese with a bloomy rind, offering earthy and nutty
                         flavors. Best with baguette, fruits, or light-bodied white wine</p>
                     <div class="padding-sides">
-                        <img src="..\images\homepage-cheese.png">
+                        <img src="..\../images\homepage-cheese.png">
                     </div>
                 </div>
                 <div class="squares pop">
@@ -106,7 +71,7 @@
                     <p class="padding-sides">A hard, granular cheese known for its sharp, nutty flavor. Pairs well with
                         full-bodied red wines and drizzled with honey</p>
                     <div>
-                        <img src="..\images\homepage-cheese.png">
+                        <img src="..\../images\homepage-cheese.png">
                     </div>
                 </div>
                 <div class="squares down">
@@ -117,7 +82,7 @@
                     <p class="padding-sides">A semi-hard cheese with a sweet, nutty taste and characteristic holes. Goes
                         well with fruity white wines or a crisp lager</p>
                     <div class="padding-sides">
-                        <img src="..\images\homepage-cheese.png">
+                        <img src="..\../images\homepage-cheese.png">
                     </div>
                 </div>
             </div>
@@ -126,6 +91,34 @@
         <div class="content-grid">
             <div class="main-content">
                 <div id="display-1">
+                    <div class="item 1">
+                        <h1>This is a test</h1>
+                    </div>
+                    <div class="item 2">
+                        <h1>This is a test</h1>
+                    </div>
+                    <div class="item 3">
+                        <h1>This is a test</h1>
+                    </div>
+                    <div class="item 4">
+                        <h1>This is a test</h1>
+                    </div>
+                </div>
+                <div id="display-2">
+                    <div class="item 1">
+                        <h1>This is a test</h1>
+                    </div>
+                    <div class="item 2"></div>
+                    <div class="item 3"></div>
+                    <div class="item 4"></div>
+                </div>
+                <div id="display-3">
+                    <div class="item 1">
+                        <h1>This is a test</h1>
+                    </div>
+                    <div class="item 2"></div>
+                    <div class="item 3"></div>
+                    <div class="item 4"></div>
                 </div>
             </div>
         </div>
